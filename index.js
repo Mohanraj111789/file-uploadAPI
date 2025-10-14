@@ -1,11 +1,17 @@
 const express = require("express");
-
+const multer = require("multer");
 const app = express();
+const upload = multer({ dest: "uploads/" });
 
 app.get("/", (req, res) => {
     res.send("Api is working");
 });
 
+app.post("/upload/file",upload.single("image"), (req, res) => {
+   return res.json({
+       message: "File uploaded successfully"
+   });
+});
 app.listen(3000, () => {
     console.log("Server is running on port 3000");
 });

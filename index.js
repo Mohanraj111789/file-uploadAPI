@@ -2,7 +2,7 @@ const express = require("express");
 // const multer = require("multer");
 const upload = require("./upload");
 const app = express();
-// const upload = multer({ dest: "uploads/" });
+
 
 app.get("/", (req, res) => {
     res.send("Api is working");

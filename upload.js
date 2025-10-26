@@ -11,7 +11,7 @@ const storage = multer.diskStorage({
         cb(null, filename);
     },
 });
-//multer is a middleware that handles file uploads
+
 module.exports = multer({
     storage: storage
 });
